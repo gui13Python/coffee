@@ -53,6 +53,8 @@
 
 #desconto{
     color: rgb(16, 221, 50);
+   display: block;
+   flex-direction: column;
 }
 
 
@@ -60,7 +62,7 @@
 
 .tem{
     display: flex;
-     width: 90%;
+     width: 100%;
      height: auto;
      
     justify-content: center;
@@ -73,13 +75,30 @@
 
 
 
-.btdentro{
+#ap{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;
 }
 
-@media screen and (min-width: 390px) {
+.tem #sb{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 5%;
+    color: brown;
+}
+
+
+#prt{
+    color: blue;
+}
+
+@media screen and (max-width: 767px)  {
   header{
    display: flex;
    flex-direction: column;
@@ -90,7 +109,7 @@
   }
 }
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 767px)  {
   .btdentro{
     display: flex;
     flex-direction: column;
@@ -102,7 +121,7 @@
 
 
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 767px)  {
  
 .tem p{
     display: flex;
@@ -120,7 +139,7 @@
 
 
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 767px)  {
  
 .tem span{
      font-family:sans-serif;
@@ -129,21 +148,26 @@
       align-items: center;
       display: flex;
       flex-direction: column;
+      padding-right: 50px;
    
 }
 }
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 767px)  {
  
 .tem #prt{
      font-family:sans-serif;
      color: rgba(45, 63, 141, 0.664);
+     padding-right: 50px;
+     
+     
     
    
 }
 }
 
-@media screen and (min-width: 390px) {
+
+@media screen and (max-width: 767px)  {
  
 .tem #ap{
      font-family:sans-serif;
@@ -159,7 +183,7 @@
 
 
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 767px) {
  
 .tem #sb{
      font-family:sans-serif;
@@ -169,6 +193,7 @@
      display: flex;
      flex-direction: column;
      text-align: center;
+     padding-right: 50px;
     
     
    
@@ -176,7 +201,7 @@
 }
 
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 767px)  {
  
 .tem #junto{
      font-family:sans-serif;
@@ -194,7 +219,7 @@
 
 
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 767px)  {
  
 #doce{
      font-family:sans-serif;
