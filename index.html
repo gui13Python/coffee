@@ -76,13 +76,14 @@ function gtag_report_conversion(url) {
   gtag('config', 'AW-11357430773');
 </script>
     <script>
-  window.onload = function() {
-    setTimeout(function() {
-      if (confirm("Deseja ir para a página do produto na Shopee?")) {
-        window.location.href = "https://s.shopee.com.br/2ViSHzdBuJ"; // Substitua pelo seu link
-      }
-    }, 10000); // Delay de 5 segundos
-  };
+    window.onload = function() {
+        setTimeout(function() {
+            if (confirm("Você deseja ir para a página do produto?")) {
+                gtag_report_conversion("https://s.shopee.com.br/2ViSHzdBuJ");
+                window.location.href = "https://s.shopee.com.br/2ViSHzdBuJ";
+            }
+        }, 10000); // Delay de 10 segundos
+    };
 </script>
 </head>
 <body class="bg-gray-50">
@@ -266,9 +267,9 @@ function gtag_report_conversion(url) {
                 <p class="text-gray-600 mb-6">Frete grátis + 
 12 Meses de garantia</p>
                     <div class="btdentro">
-                         <a id="desconto" href="https://s.shopee.com.br/AUkb6JQJat" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
-                    Comprar Agora 
-                </a>
+                        <a id="desconto" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
+    Ir para o produto
+</a>
 
 
                     </div>
@@ -296,9 +297,9 @@ function gtag_report_conversion(url) {
                 <h2 class="text-3xl font-bold mt-4 mb-2">Leve por <span class="text-orange-600">R$99,90</span> ou 12x R$9,69</h2>
                 <p class="text-gray-600 mb-6">Frete grátis </p>
                     <div class="btdentro">
-                         <a id="desconto" href="https://s.shopee.com.br/803G7rab2W" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
-                    Comprar  Agora  <br>  Porta Cápsulas + Adaptador Dolce Gusto CPC-DG
-                </a>
+                        <a id="desconto" href="https://s.shopee.com.br/803G7rab2W" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
+    Ir para o produto<br>Porta Cápsulas + Adaptador Dolce Gusto CPC-DG
+</a>
 
 
                     </div>
@@ -356,6 +357,7 @@ function gtag_report_conversion(url) {
 </body>
 
 </html>
+
 
 
 
