@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://cdn.tailwindcss.com translate.googleapis.com translate.google.com static.mcc.miui.com connect.facebook.net shopee.sg images.uc.cn g.alicdn.com blob:;">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://cdn.tailwindcss.com translate.googleapis.com translate.google.com static.mcc.miui.com connect.facebook.net shopee.sg images.uc.cn g.alicdn.com blob:;">
     <meta name="google-adsense-account" content="ca-pub-7348272036985298">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteira Oster PrimaLatte Touch | Café Profissional + Compatível com Dolce Gusto</title>
     <meta name="description" content="A cafeteira Oster PrimaLatte Touch prepara espresso, cappuccino e latte com cápsulas Dolce Gusto. Pressão de 19 bar, painel touch e crema perfeita.">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7348272036985298" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) - Consolidado -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11357430773"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-11357430773');
+        gtag('config', 'G-YKM9XW63Z4'); // Adiciona Google Analytics
     </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7348272036985298" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Event snippet for shopee clique conversion page -->
     <script>
     function gtag_report_conversion_shopee(url) {
@@ -40,7 +41,7 @@
     </script>
     <!-- Event snippet for cafeteira oster conversion page -->
     <script>
-    function gtag_report_conversion_oster(url) {
+    function gtag_report_conversion(url) {
       var callback = function () {
         if (typeof(url) != 'undefined') {
           window.location = url;
@@ -60,7 +61,7 @@
     window.onload = function() {
         setTimeout(function() {
             if (confirm("Você deseja ir para a página do produto?")) {
-                gtag_report_conversion_oster("https://s.shopee.com.br/2ViSHzdBuJ");
+                gtag_report_conversion("https://s.shopee.com.br/2ViSHzdBuJ");
                 window.location.href = "https://s.shopee.com.br/2ViSHzdBuJ";
             }
         }, 10000);
