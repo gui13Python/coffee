@@ -13,18 +13,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" href="https://osterar.vtexassets.com/arquivos/ids/155973/oster-favicon.png?v=637388940042870000">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VPR4Z14LV0"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPR4Z14LV0"></script>
+
+    <!-- ...existing code... -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-VPR4Z14LV0');
+
+  // Função para rastrear conversão ao clicar nos botões da Shopee
+  function gtag_report_conversion(url) {
+    gtag('event', 'conversion', {
+      'send_to': 'G-VPR4Z14LV0',
+      'event_callback': function() {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      }
+    });
+    // Para garantir o redirecionamento caso o callback não funcione
+    setTimeout(function() {
+      if (typeof(url) !== 'undefined') {
+        window.location = url;
+      }
+    }, 1000);
+    return false;
+  }
 </script>
-    
+<!-- ...existing code... -->
+
+  
+<script>
 let scrollCount = 0;
 window.addEventListener("scroll", function() {
-    // Cada vez que rolar mais de 300px, conta uma "rolada"
+    // Cada vez que rolar mais de 1000px, conta uma "rolada"
     if (window.scrollY > 1000 * (scrollCount + 1)) {
         scrollCount++;
     }
@@ -32,7 +55,7 @@ window.addEventListener("scroll", function() {
     // Quando rolar 3 vezes, dispara o alerta e remove o evento
     if (scrollCount === 3) {
         if (confirm("Gostou da cafeteira? Quer ver o preço com desconto?")) {
-            window.location.href = "https://s.shopee.com.br/2ViSHzdBuJ";
+            gtag_report_conversion("https://s.shopee.com.br/2ViSHzdBuJ");
         }
         window.removeEventListener("scroll", arguments.callee);
     }
@@ -58,9 +81,10 @@ window.addEventListener("scroll", function() {
     <header class="bg-white shadow-sm py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-orange-600">Oster<span id="prima" class="text-gray-800">PrimaLatte</span></div>
-            <a id="cp" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-6 rounded-lg">
-                Ir para o produto!
-            </a>
+            <!-- ...existing code... -->
+<a id="cp" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="return gtag_report_conversion(this.href);" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-6 rounded-lg">
+    Ir para o produto!
+    <!-- modificado -->
         </div>
     </header>
 
@@ -74,9 +98,10 @@ window.addEventListener("scroll", function() {
                 Espresso, cappuccino ou latte cremoso com um toque. <strong>Compatível com Porta cápsulas Dolce Gusto!</strong>
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition">
-                    Aproveite agora →
-                </a>
+                <a href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="return gtag_report_conversion(this.href);" class="btn-primary bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition">
+    Aproveite agora →
+    <!-- modificado 5 -->
+</a>
                 <a href="#diferenciais" class="btn-secondary border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold py-3 px-8 rounded-lg text-lg transition">
                     Saiba Mais
                 </a>
@@ -121,9 +146,10 @@ allowfullscreen>
                 <h2 class="text-3xl font-bold mt-4 mb-2">Leve por <span class="text-orange-600">R$1.049,00</span> ou 12x R$87,41</h2>
                 <p class="text-gray-600 mb-6">Frete grátis + 12 Meses de garantia</p>
                 <div class="btdentro">
-                    <a id="desconto" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
-                        Ir para o produto
-                    </a>
+                    <a id="desconto" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="return gtag_report_conversion(this.href);" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
+    Ir para o produto
+    <!-- modificado2 -->
+</a>
                 </div>
                 <div class="mt-6 flex flex-wrap justify-center items-center">
                     <img src="https://cdn-icons-png.flaticon.com/512/4883/4883722.png" alt="Pagamento seguro" class="h-8 mx-2 mb-2">
@@ -277,9 +303,10 @@ allowfullscreen>
                 <h2 class="text-3xl font-bold mt-4 mb-2">Leve por <span class="text-orange-600">R$1.049,00</span> ou 12x R$87,41</h2>
                 <p class="text-gray-600 mb-6">Frete grátis + 12 Meses de garantia</p>
                 <div class="btdentro">
-                    <a id="desconto" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
-                        Ir para o produto
-                    </a>
+                   <a id="desconto" href="https://s.shopee.com.br/803G7rab2W" onclick="return gtag_report_conversion(this.href);" class="btn-primary ...">
+    Ir para o produto<br>Porta Cápsulas + Adaptador Dolce Gusto CPC-DG
+</a>
+<!-- modificado 3 -->
                 </div>
                 <div class="mt-6 flex flex-wrap justify-center items-center">
                     <img src="https://cdn-icons-png.flaticon.com/512/4883/4883722.png" alt="Pagamento seguro" class="h-8 mx-2 mb-2">
@@ -360,6 +387,7 @@ allowfullscreen>
 </body>
 
 </html>
+
 
 
 
