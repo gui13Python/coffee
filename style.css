@@ -4,6 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2%;
+    flex-direction: column;
+    background-color: white;
 }
 
 .textovideo{
@@ -13,6 +16,22 @@
     justify-content: center;
     margin-bottom: 2%;
     color: rgba(37, 37, 37, 0.486);
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    font-family: sans-serif;
+}
+
+
+.textovideo p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.textovideo span{
+    color: rgb(255, 69, 2);
+    font-size: 25px;
+    font-weight: bold;
 }
 
 

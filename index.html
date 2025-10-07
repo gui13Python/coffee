@@ -1,72 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://cdn.tailwindcss.com translate.googleapis.com translate.google.com static.mcc.miui.com connect.facebook.net shopee.sg images.uc.cn g.alicdn.com blob:;">
     <meta name="google-adsense-account" content="ca-pub-7348272036985298">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteira Oster PrimaLatte Touch | Café Profissional + Compatível com Dolce Gusto</title>
     <meta name="description" content="A cafeteira Oster PrimaLatte Touch prepara espresso, cappuccino e latte com cápsulas Dolce Gusto. Pressão de 19 bar, painel touch e crema perfeita.">
-    <!-- Google tag (gtag.js) - Consolidado -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7348272036985298" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11357430773"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-11357430773');
-        gtag('config', 'G-YKM9XW63Z4'); // Adiciona Google Analytics
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7348272036985298" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Event snippet for shopee clique conversion page -->
+    <!-- Event snippet for produto shopee conversion page -->
     <script>
-    function gtag_report_conversion_shopee(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-11357430773/XHDMCKzHmp4bEPXH0qcq',
+                'value': 1.0,
+                'currency': 'BRL',
+                'transaction_id': '',
+                'event_callback': callback
+            });
+            return false;
         }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-11357430773/fKVFCNqbsZ4bEPXH0qcq',
-          'value': 1.0,
-          'currency': 'BRL',
-          'transaction_id': '',
-          'event_callback': callback
-      });
-      return false;
-    }
     </script>
-    <!-- Event snippet for cafeteira oster conversion page -->
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+    
+   <script>
+let scrollCount = 0;
+window.addEventListener("scroll", function() {
+    // Cada vez que rolar mais de 300px, conta uma "rolada"
+    if (window.scrollY > 1000 * (scrollCount + 1)) {
+        scrollCount++;
+    }
+
+    // Quando rolar 3 vezes, dispara o alerta e remove o evento
+    if (scrollCount === 3) {
+        if (confirm("Gostou da cafeteira? Quer ver o preço com desconto?")) {
+            window.location.href = "https://s.shopee.com.br/2ViSHzdBuJ";
         }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-11357430773/NXxYCLaXup4bEPXH0qcq',
-          'value': 0.0,
-          'currency': 'BRL',
-          'transaction_id': '',
-          'event_callback': callback
-      });
-      return false;
+        window.removeEventListener("scroll", arguments.callee);
     }
-    </script>
-    <script>
-    window.onload = function() {
-        setTimeout(function() {
-            if (confirm("Você deseja ir para a página do produto?")) {
-                gtag_report_conversion("https://s.shopee.com.br/2ViSHzdBuJ");
-                window.location.href = "https://s.shopee.com.br/2ViSHzdBuJ";
-            }
-        }, 10000);
-    };
-    </script>
+});
+</script>
+
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -85,7 +75,7 @@
     <header class="bg-white shadow-sm py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-orange-600">Oster<span id="prima" class="text-gray-800">PrimaLatte</span></div>
-            <a id="cp" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion_shopee(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-6 rounded-lg">
+            <a id="cp" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-6 rounded-lg">
                 Ir para o produto!
             </a>
         </div>
@@ -101,7 +91,7 @@
                 Espresso, cappuccino ou latte cremoso com um toque. <strong>Compatível com Porta cápsulas Dolce Gusto!</strong>
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion_shopee(this.href); return true;" class="btn-primary bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition">
+                <a href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition">
                     Aproveite agora →
                 </a>
                 <a href="#diferenciais" class="btn-secondary border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold py-3 px-8 rounded-lg text-lg transition">
@@ -117,9 +107,48 @@
         <div class="container mx-auto px-4">
             <div class="textovideo">
                 <p>Cafeteira Espresso Oster Primalatte </p>
+                  <p> Sua Cafeteria Nespresso/Dolce Gusto em CASA por MENOS! 🤫☕</p>
+                <p> <span>SEGREDOS REVELADOS</span>: </p>
+                <img width="30" height="30" src="https://img.icons8.com/?size=100&id=C93WggfjREpS&format=png&color=000000" alt="seta para baixo "> 
+
+                  
             </div>
             <div class="vidoapresentacao">
-                <iframe src="https://down-cvs-br.vod.susercontent.com/api/v4/11110105/mms/br-11110105-6kfko-mav7iy4n64u149.16000081749639911.mp4" width="900" height="400" title="Example Website" allow="autoplay;"></iframe>
+           
+
+<iframe width="500" height="800"
+src="https://www.youtube.com/embed/4HPV1omuGl0?autoplay=1&mute=1"
+title="SEGREDOS REVELADOS: Sua Cafeteria Nespresso/Dolce Gusto em CASA por MENOS! 🤫☕"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+
+
+
+
+
+
+
+
+
+<div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+                <span class="bg-red-100 text-red-600 px-4 py-1 rounded-full font-bold">OFERTA LIMITADA</span>
+                <h2 class="text-3xl font-bold mt-4 mb-2">Leve por <span class="text-orange-600">R$1.049,00</span> ou 12x R$87,41</h2>
+                <p class="text-gray-600 mb-6">Frete grátis + 12 Meses de garantia</p>
+                <div class="btdentro">
+                    <a id="desconto" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
+                        Ir para o produto
+                    </a>
+                </div>
+                <div class="mt-6 flex flex-wrap justify-center items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4883/4883722.png" alt="Pagamento seguro" class="h-8 mx-2 mb-2">
+                    <p>PAGAMENTO SEGURO</p>
+                    <span class="text-sm text-gray-500 w-full mt-2">Compra 100% segura • 7 dias para devolução</span>
+                </div>
+            </div>
+
             </div>
         </div>
     </section>
@@ -210,9 +239,9 @@
                     <tbody class="divide-y divide-gray-200">
                         <tr>
                             <td class="py-3 px-4 font-medium">Preço</td>
-                            <td class="py-3 px-4 text-center text-orange-600 font-bold">R$ 899</td>
-                            <td class="py-3 px-4 text-center">R$ 1.200+</td>
-                            <td class="py-3 px-4 text-center">R$ 1.100+</td>
+                            <td class="py-3 px-4 text-center text-orange-600 font-bold">R$1.049,00</td>
+                            <td class="py-3 px-4 text-center">R$ 1.450+</td>
+                            <td class="py-3 px-4 text-center">R$ 1.600+</td>
                         </tr>
                         <tr class="bg-gray-50">
                             <td class="py-3 px-4 font-medium">Pressão (bar)</td>
@@ -257,14 +286,15 @@
     </section>
 
     <!-- Oferta Final -->
+    
     <section id="comprar" class="py-16 bg-gray-100">
         <div class="container mx-auto text-center">
             <div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
                 <span class="bg-red-100 text-red-600 px-4 py-1 rounded-full font-bold">OFERTA LIMITADA</span>
-                <h2 class="text-3xl font-bold mt-4 mb-2">Leve por <span class="text-orange-600">R$999,00</span> ou 12x R$83,25</h2>
+                <h2 class="text-3xl font-bold mt-4 mb-2">Leve por <span class="text-orange-600">R$1.049,00</span> ou 12x R$87,41</h2>
                 <p class="text-gray-600 mb-6">Frete grátis + 12 Meses de garantia</p>
                 <div class="btdentro">
-                    <a id="desconto" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion_shopee(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
+                    <a id="desconto" href="https://s.shopee.com.br/2ViSHzdBuJ" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
                         Ir para o produto
                     </a>
                 </div>
@@ -288,10 +318,10 @@
         <div class="container mx-auto text-center">
             <div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
                 <span class="bg-red-100 text-red-600 px-4 py-1 rounded-full font-bold">OFERTA LIMITADA</span>
-                <h2 class="text-3xl font-bold mt-4 mb-2">Leve por <span class="text-orange-600">R$99,90</span> ou 12x R$9,69</h2>
+                <h2 class="text-3xl font-bold mt-4 mb-2">Leve por <span class="text-orange-600">R$99,90</span> ou 12x R$8,32</h2>
                 <p class="text-gray-600 mb-6">Frete grátis</p>
                 <div class="btdentro">
-                    <a id="desconto" href="https://s.shopee.com.br/803G7rab2W" onclick="gtag_report_conversion_shopee(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
+                    <a id="desconto" href="https://s.shopee.com.br/803G7rab2W" onclick="gtag_report_conversion(this.href); return true;" class="btn-primary bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-12 rounded-lg text-lg">
                         Ir para o produto<br>Porta Cápsulas + Adaptador Dolce Gusto CPC-DG
                     </a>
                 </div>
@@ -335,11 +365,11 @@
             "@type": "Offer",
             "url": "https://www.exemplo.com/comprar",
             "priceCurrency": "BRL",
-            "price": "799",
+            "price": "1049.00",
             "availability": "https://schema.org/InStock",
             "seller": {
                 "@type": "Organization",
-                "name": "Sua Loja"
+                "name": "shopee Brasil"
             }
         }
     }
